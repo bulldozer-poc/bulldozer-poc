@@ -1,0 +1,3 @@
+pre-merge:
+  required-status:
+    - check 1
