@@ -2,4 +2,4 @@ preMergeChecks:
     - check 1
 preMergeTimeoutSec: 3600
 stagingBranch: staging
-preMergeTimeoutSec: 3600
+mergeTimeoutSec: 3600
