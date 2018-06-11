@@ -1,3 +1,4 @@
 pre-merge:
-  required-status:
+  required-checks:
     - check 1
+staging-branch: staging
