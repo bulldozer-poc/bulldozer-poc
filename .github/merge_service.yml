@@ -1,4 +1,5 @@
-pre-merge:
-  required-checks:
+preMergeChecks:
     - check 1
-staging-branch: staging
+preMergeTimeoutSec: 3600
+stagingBranch: staging
+preMergeTimeoutSec: 3600
