@@ -1,0 +1,1 @@
+curl -s -X POST --connect-timeout 60 --max-time 60  -H "Authorization: token $TOKEN" -d "{\"title\":\"PR FOR $BRANCH\",\"head\":\"$BRANCH\",\"base\":\"$BASE_BRANCH\",\"body\":\"\", \"mantainers_can_modify\": \"true\"}" https://api.github.com/repos/jontierno/bulldozer-poc/pulls
