@@ -1,5 +1,5 @@
 
-FILE=$BRANCH
+FILE="$BRANCH.tmp"
 #file
 echo "$BRANCH" >> $FILE
 git add .
