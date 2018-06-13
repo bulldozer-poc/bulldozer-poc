@@ -1,7 +1,3 @@
-branch=$(git branch | sed -n -e 's/^\* \(.*\)/\1/p')
-f=branch
-#file
-echo "$BRANCH" >> $F
-git commit -m "message to $F"
-git add $F
-gpsup
+export BRANCH=$(git branch | sed -n -e 's/^\* \(.*\)/\1/p')
+DIR="$(cd "$(dirname "$0")" && pwd)"
+$DIR/conflict-commit-file.sh

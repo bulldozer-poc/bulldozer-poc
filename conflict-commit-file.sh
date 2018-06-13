@@ -1,6 +1,7 @@
-f=branch
+
+FILE=$BRANCH
 #file
-echo "conflict $BRANCH" >> $F
-git commit -m "message to $F"
-git add $F
-gpsup
+echo "$BRANCH" >> $FILE
+git add .
+git commit -m "message to $FILE"
+git push -u origin $BRANCH
