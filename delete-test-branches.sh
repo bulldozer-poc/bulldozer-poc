@@ -1,11 +1,9 @@
-BRANCH="$PREFIX-1"
-git branch -D $BRANCH
-git push origin :$BRANCH
+DIR="$(cd "$(dirname "$0")" && pwd)"
 
-BRANCH="$PREFIX-2"
-git branch -D $BRANCH
-git push origin :$BRANCH
 
-BRANCH="$PREFIX-3"
-git branch -D $BRANCH
-git push origin :$BRANCH
+for (( i=1; i<=$1; i++ ))
+do
+	BRANCH="$PREFIX-$i"
+	git branch -D $BRANCH
+	git push origin :$BRANCH
+done
