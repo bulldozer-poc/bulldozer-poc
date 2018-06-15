@@ -3,23 +3,13 @@ export BASE_BRANCH=$INITIAL_BRANCH
 DIR="$(cd "$(dirname "$0")" && pwd)"
 
 export BRANCH="$PREFIX-1"
-git checkout -b "$BRANCH"
-git push -u origin $BRANCH
-$DIR/commit-file.sh
-$DIR/create-pr.sh
+$DIR/branch-create.sh
 
 git checkout $INITIAL_BRANCH
 export BRANCH="$PREFIX-2"
-git checkout -b "$BRANCH"
-git push -u origin $BRANCH
-$DIR/commit-file.sh
-$DIR/create-pr.sh
+$DIR/branch-create.sh
 
 git checkout $INITIAL_BRANCH
-export BRANCH="$PREFIX-3"
-git checkout -b "$BRANCH"
-git push -u origin $BRANCH
-$DIR/commit-file.sh
-$DIR/create-pr.sh
+$DIR/branch-create.sh
 
 git checkout $INITIAL_BRANCH
