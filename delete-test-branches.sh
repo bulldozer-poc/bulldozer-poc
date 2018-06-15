@@ -1,9 +1,8 @@
-DIR="$(cd "$(dirname "$0")" && pwd)"
 
+BRANCHES=$(git branch | sed -n -e "s/^\  \($PREFIX-.*\)/\1/p")
 
-for (( i=1; i<=$1; i++ ))
+for BRANCH in $BRANCHES
 do
-	BRANCH="$PREFIX-$i"
 	git branch -D $BRANCH
 	git push origin :$BRANCH
 done
