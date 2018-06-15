@@ -4,3 +4,4 @@ git checkout -b "$BRANCH"
 git push -u origin $BRANCH
 $DIR/commit-file.sh
 $DIR/create-pr.sh
+$DIR/success-status.sh
