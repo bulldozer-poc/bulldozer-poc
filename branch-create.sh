@@ -1,3 +1,4 @@
+echo "========CREATE $BRANCH BRANCH"
 DIR="$(cd "$(dirname "$0")" && pwd)"
 git checkout -b "$BRANCH"
 git push -u origin $BRANCH
